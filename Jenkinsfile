@@ -40,7 +40,7 @@ pipeline
 			steps
 			{
 				sh 'pip install --no-cache-dir -r ./requirements.txt'
-				sh 'python3 unitTest.py'
+				sh 'python3 exam.py'
 			}
 			post
 			{
