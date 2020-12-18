@@ -7,6 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN python ./test.py
+RUN python ./exam.py
 
 CMD [ "python", "./exam.py" ]
