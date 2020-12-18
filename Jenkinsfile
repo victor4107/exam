@@ -1,7 +1,7 @@
 pipeline
 {
     environment {
-        registryCredential = 'dockerhub'
+        registryCredential = 'viktor4747'
         dockerImage = ''
     }
 	options
@@ -70,7 +70,7 @@ pipeline
                 echo "Application Publishing"
                 checkout scm
                 script {
-                    def customImage = docker.build("utilka/docker-test:${env.BUILD_ID}")
+                    def customImage = docker.build("viktor4747/exam:${env.BUILD_ID}")
                     docker.withRegistry('',registryCredential )
                     {
                         customImage.push()}
