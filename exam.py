@@ -29,6 +29,9 @@ class MyTest(ut.TestCase): #створення класу для реаліза�
     def test_usage1(self):#створення функції для тесту
         self.assertIn(int(b), range(0,31)) 
         sys.stdout.flush()
-    
+        
 if __name__ == "__main__":
-    ut.main()#команда яка запускає всі тести із заданого модуля
+    import xmlrunner
+    runner = xmlrunner.XMLTestRunner(output='test-reports')
+    ut.main(testRunner=runner)
+    ut.main()
